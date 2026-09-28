@@ -23,8 +23,9 @@ body.page-champs-application {
     background-size: cover;
 }
 
-/* Fond crème uni pour la page À propos */
-body.page-a-propos {
+/* Fond crème uni pour À propos et Origines */
+body.page-a-propos,
+body.page-origines {
     background-color: #fcf8f2;
 }
 
@@ -172,7 +173,57 @@ body.page-a-propos {
     color: #777;
 }
 
-/* --- 6. PAGE : CHAMPS D'APPLICATION (Cartes) --- */
+/* --- 6. PAGE : ORIGINES --- */
+.origins-wrapper {
+    max-width: 1050px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+}
+
+.origins-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.origins-content .page-title {
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 25px;
+    letter-spacing: -0.5px;
+}
+
+.origins-text {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: #666;
+    font-weight: 300;
+}
+
+.origins-text p {
+    margin-bottom: 18px;
+}
+
+.origins-text strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.origins-text .disclaimer {
+    font-style: italic;
+    font-size: 0.82rem;
+    color: #888;
+    margin-top: 25px;
+    border-left: 2px solid #e8a598;
+    padding-left: 12px;
+}
+
+/* --- 7. PAGE : CHAMPS D'APPLICATION (Cartes) --- */
 .page-title {
     font-size: 2.8rem;
     font-weight: 300;
@@ -226,7 +277,7 @@ body.page-a-propos {
     font-weight: 300;
 }
 
-/* --- 7. Bouton Accueil en bas à droite --- */
+/* --- 8. Bouton Accueil en bas à droite --- */
 .home-icon {
     position: fixed;
     bottom: 25px;
@@ -246,10 +297,12 @@ body.page-a-propos {
     opacity: 0.85;
 }
 
-/* --- 8. Adaptation Mobile & Tablette --- */
+/* --- 9. Adaptation Mobile & Tablette --- */
 @media (max-width: 900px) {
-    .cards-grid {
+    .cards-grid,
+    .origins-wrapper {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
 
     .about-wrapper {
@@ -258,11 +311,16 @@ body.page-a-propos {
 
     .about-wrapper .page-title,
     .photo-polaroid,
-    .illustration-heart {
+    .illustration-heart,
+    .origins-image {
         position: static;
         transform: none;
         margin: 20px auto;
         text-align: center;
+    }
+
+    .origins-image {
+        max-width: 300px;
     }
 
     .about-text {
