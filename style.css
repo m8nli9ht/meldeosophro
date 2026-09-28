@@ -117,19 +117,39 @@ body {
     justify-content: center;
 }
 
+/* Effet Polaroid pour la photo */
+.about-image-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
 .photo-frame {
-    background-color: var(--card-bg);
-    padding: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transform: rotate(-2deg);
-    max-width: 380px;
+    background-color: #ffffff; /* Fond blanc pur pour l'effet papier photo */
+    padding: 15px 15px 55px 15px; /* Bordure plus large en bas (typique des Polaroid) */
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.08); /* Ombre portée douce */
+    transform: rotate(-3deg); /* Légère inclinaison naturelle */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 360px;
+    width: 100%;
+    position: relative;
+}
+
+/* Effet d'interaction au survol */
+.photo-frame:hover {
+    transform: rotate(0deg) scale(1.02); /* Se redresse légèrement au survol */
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.18);
 }
 
 .photo-frame img {
     width: 100%;
     height: auto;
     display: block;
+    aspect-ratio: 1 / 1; /* Aspect carré style photo instantanée */
+    object-fit: cover;
+    border: 1px solid #f0f0f0; /* Très légère bordure autour de la photo */
 }
+
 
 .about-content h1 {
     font-family: var(--font-heading);
