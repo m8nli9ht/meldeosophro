@@ -90,17 +90,25 @@ body.page-home {
 }
 
 /* Zone Marque à gauche */
+
+/* Le M géant avec la typo Virtual */
+.brand-letter-virtual {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-family: 'Virtual', cursive, sans-serif;
+    font-size: 14rem; /* Ajuste la taille selon le rendu de la police */
+    line-height: 1;
+    color: #000000;
+    z-index: 1;
+    user-select: none;
+}
+
+/* Positionnement des éléments superposés */
 .home-brand {
     position: relative;
     width: 450px;
     height: 380px;
-}
-
-.brand-letter {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 220px;
 }
 
 .brand-heart {
@@ -108,6 +116,7 @@ body.page-home {
     top: 90px;
     left: 170px;
     width: 150px;
+    z-index: 2;
 }
 
 .brand-title {
@@ -116,7 +125,18 @@ body.page-home {
     left: 180px;
     display: flex;
     flex-direction: column;
+    z-index: 2;
 }
+
+
+.brand-letter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 220px;
+}
+
+
 
 .brand-name {
     font-size: 1.2rem;
