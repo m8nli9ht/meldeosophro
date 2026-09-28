@@ -3,138 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Origines | Mélanie Deo - Sophrologue Toulouse</title>
+    <title>Origines - Mélanie Deo Sophrologue Toulouse</title>
     <meta name="description" content="Découvrez les origines de la sophrologie, une méthode créée par le Dr Alfonso Caycedo pour retrouver l'équilibre entre corps, esprit et émotions.">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Styles de base pour la page Origines */
-        body {
-            font-family: 'Garet', 'Helvetica Neue', sans-serif;
-            background-color: #fff7f1;
-            color: #323232;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .origins-section {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 40px;
-            margin-top: 40px;
-        }
-
-        .origins-image {
-            flex: 1 1 400px;
-            text-align: center;
-        }
-
-        .origins-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .origins-content {
-            flex: 1 1 500px;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 300;
-            color: #323232;
-            margin-bottom: 20px;
-            letter-spacing: -0.02em;
-        }
-
-        .origins-text p {
-            font-size: 1.05rem;
-            margin-bottom: 1.2rem;
-            letter-spacing: 0.03em;
-        }
-
-        .origins-text strong {
-            font-weight: 700;
-        }
-
-        .origins-text .disclaimer {
-            font-style: italic;
-            font-size: 0.95rem;
-            color: #666;
-            margin-top: 30px;
-            border-left: 3px solid #bba197;
-            padding-left: 15px;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            .origins-section {
-                flex-direction: column;
-            }
-        }
-    </style>
 </head>
-<body>
+<body class="page-origines">
 
-    <!-- En-tête / Navigation -->
-    <header>
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="a-propos.html">À PROPOS</a></li>
-                <li><a href="origines.html" class="active">ORIGINES</a></li>
-                <li><a href="champs-d-application.html">APPLICATION</a></li>
-                <li><a href="prestations.html">PRESTATIONS</a></li>
-                <li><a href="seance.html">SÉANCE</a></li>
-                <li><a href="rdv.html" class="btn-rdv">RDV</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- En-tête unique chargé par le script JS -->
+    <header id="site-header" class="site-header"></header>
 
-    <!-- Contenu Principal -->
-    <main class="container">
-        <section class="origins-section">
+    <main class="main-content">
+        <div class="origins-wrapper">
             
-            <!-- Section Image -->
+            <!-- Visuel à gauche -->
             <div class="origins-image">
-                <img src="_assets/images/8cb8d9c18e0de0b7ee0806d65909c6ef.png" alt="Origines de la Sophrologie">
+                <img src="origines-illustration.png" alt="Origines de la Sophrologie">
             </div>
 
-            <!-- Section Texte -->
+            <!-- Contenu texte à droite -->
             <div class="origins-content">
-                <h1>Origines</h1>
+                <h1 class="page-title">Origines</h1>
+
                 <div class="origins-text">
-                    <p>
-                        <strong>La sophrologie</strong> est une science, élaborée en 1960 par le docteur <strong>Alfonso Caycedo</strong>, <strong>neuropsychiatre</strong> colombien. Intéressé par le psychisme humain et témoin de la souffrance physique et psychique de ses patients, il met au point cette méthode en s'appuyant sur <strong>la neurophysiologie et les techniques de relaxation occidentales et orientales</strong>.
-                    </p>
-                    <p>
-                        De ses recherches et de son souci de rendre la personne libre et autonome dans sa pratique est née <strong>la Sophrologie</strong>.
-                    </p>
-                    <p>
-                        À travers des <strong>techniques de respiration, de relaxation et de visualisation positive</strong>, sa pratique vise au bon équilibre entre nos pensées, nos émotions et notre corps.
-                    </p>
-                    <p>
-                        Il s'agit avant tout d'apprendre à mobiliser ses propres ressources et capacités dans le sens de ses besoins afin de mieux être au quotidien.
-                    </p>
+                    <p><strong>La sophrologie</strong> est une science, élaborée en 1960 par le docteur <strong>Alfonso Caycedo</strong>, <strong>neuropsychiatre</strong> colombien[cite: 8]. Intéressé par le psychisme humain et témoin de la souffrance physique et psychique de ses patients, il met au point cette méthode en s'appuyant sur <strong>la neurophysiologie et les techniques de relaxation occidentales et orientales</strong>[cite: 8].</p>
+
+                    <p>De ses recherches et de son souci de rendre la personne libre et autonome dans sa pratique est née <strong>la Sophrologie</strong>[cite: 8].</p>
+
+                    <p>À travers des <strong>techniques de respiration, de relaxation et de visualisation positive</strong>, sa pratique vise au bon équilibre entre nos pensées, nos émotions et notre corps[cite: 8].</p>
+
+                    <p>Il s'agit avant tout d'apprendre à mobiliser ses propres ressources et capacités dans le sens de ses besoins afin de mieux être au quotidien[cite: 8].</p>
+
                     <p class="disclaimer">
-                        La Sophrologie ne se substitue pas à un accompagnement médical et/ou thérapeutique, c'est une approche complémentaire.
+                        La Sophrologie ne se substitue pas à un accompagnement médical et/ou thérapeutique, c'est une approche complémentaire[cite: 8].
                     </p>
                 </div>
             </div>
 
-        </section>
+        </div>
+
+        <!-- Bouton Retour Accueil -->
+        <a href="index.html" class="home-icon" aria-label="Retour à l'accueil">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+        </a>
     </main>
 
+    <script src="header.js"></script>
 </body>
 </html>
