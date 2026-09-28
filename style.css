@@ -73,6 +73,104 @@ body.page-origines {
     width: 100%;
 }
 
+/* --- PAGE : ACCUEIL --- */
+body.page-home {
+    background: url('bg-aquarelle-terracotta.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.home-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 50px;
+}
+
+/* Zone Marque à gauche */
+.home-brand {
+    position: relative;
+    width: 450px;
+    height: 380px;
+}
+
+.brand-letter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 220px;
+}
+
+.brand-heart {
+    position: absolute;
+    top: 90px;
+    left: 170px;
+    width: 150px;
+}
+
+.brand-title {
+    position: absolute;
+    bottom: 20px;
+    left: 180px;
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-name {
+    font-size: 1.2rem;
+    color: #222;
+    font-weight: 400;
+}
+
+.brand-job {
+    font-size: 1.1rem;
+    color: #222;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+/* Zone Accroche & Bouton à droite */
+.home-hero {
+    max-width: 420px;
+}
+
+.home-hero h1 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: #222;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.home-hero p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* Bouton principal de RDV */
+.btn-primary {
+    display: inline-block;
+    padding: 14px 28px;
+    border: 1px solid #333;
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #222;
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #333;
+    color: #fff;
+}
+
 /* --- 5. PAGE : À PROPOS --- */
 .page-a-propos .main-content {
     display: flex;
