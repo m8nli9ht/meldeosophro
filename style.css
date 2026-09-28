@@ -17,6 +17,12 @@ body {
     background-size: cover;
 }
 
+/* Fond spécifique pour cette page uniquement */
+body.page-champs-application {
+    background: linear-gradient(rgba(248, 237, 235, 0.45), rgba(248, 237, 235, 0.45)), 
+                url('bg-application.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
 /* --- En-tête & Navigation --- */
 .site-header {
     width: 100%;
