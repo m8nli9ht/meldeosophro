@@ -1,3 +1,10 @@
+/* Déclaration de la police Virtual au format OTF */
+@font-face {
+    font-family: 'Virtual';
+    src: url('Virtual.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 /* --- 1. Réinitialisation globale --- */
 * {
     box-sizing: border-box;
