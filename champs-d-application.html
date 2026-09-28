@@ -4,35 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Champs d'application - Mélanie Deo Sophrologue Toulouse</title>
-    <meta name="description" content="Découvrez les champs d'application de la sophrologie avec Mélanie Deo à Toulouse : gestion du stress, anxiété, sommeil, accompagnement burn-out, préparation aux examens et événements de vie.">
+    <meta name="description" content="Découvrez les champs d'application de la sophrologie avec Mélanie Deo à Toulouse.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- En-tête / Navigation -->
-    <header class="site-header">
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="a-propos.html">A PROPOS</a></li>
-                <li><a href="origines.html">ORIGINES</a></li>
-                <li><a href="champs-d-application.html" class="active">APPLICATION</a></li>
-                <li><a href="prestations.html">PRESTATIONS</a></li>
-                <li><a href="seance.html">SEANCE</a></li>
-                <li><a href="https://calendar.app.google/umbe3jq2weTHkLhp6" target="_blank" rel="noopener">RDV</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Header centralisé chargé par JS -->
+    <header id="site-header" class="site-header"></header>
 
-    <!-- Contenu Principal -->
     <main class="main-content">
         <section class="applications-section">
             <div class="container">
                 <h1 class="page-title">Champs d’application</h1>
 
                 <div class="cards-grid">
-                    
-                    <!-- Carte 1 -->
                     <article class="card">
                         <div class="card-header">
                             <h2>Apaiser<br>le quotidien</h2>
@@ -48,7 +33,6 @@
                         </div>
                     </article>
 
-                    <!-- Carte 2 -->
                     <article class="card">
                         <div class="card-header">
                             <h2>Traverser<br>une difficulté</h2>
@@ -61,7 +45,6 @@
                         </div>
                     </article>
 
-                    <!-- Carte 3 -->
                     <article class="card">
                         <div class="card-header">
                             <h2>Se préparer<br>à un événement</h2>
@@ -75,12 +58,10 @@
                             </ul>
                         </div>
                     </article>
-
                 </div>
             </div>
         </section>
-        
-        <!-- Bouton Accueil en bas à droite -->
+
         <a href="index.html" class="home-icon" aria-label="Retour à l'accueil">
             <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
                 <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
@@ -88,5 +69,7 @@
         </a>
     </main>
 
+    <!-- Inclusion du script header -->
+    <script src="header.js"></script>
 </body>
 </html>
