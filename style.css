@@ -456,6 +456,43 @@ body.page-home {
     font-weight: 300;
 }
 
+/* --- Ajustements spécifiques à la page Prestations --- */
+.page-prestations .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+    opacity: 0.85;
+    line-height: 1.4;
+}
+
+.card-action {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.btn-card {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid currentColor;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-card:hover {
+    background-color: currentColor;
+    color: #fff;
+}
+
 /* --- 8. Bouton Accueil en bas à droite --- */
 .home-icon {
     position: fixed;
