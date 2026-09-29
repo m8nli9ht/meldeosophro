@@ -69,6 +69,98 @@ body.page-origines {
     font-weight: 700;
 }
 
+/* Fond crème uni pour À propos, Origines, Prestations et RDV */
+body.page-a-propos,
+body.page-origines,
+body.page-prestations,
+body.page-rdv {
+    background-color: #fcf8f2;
+}
+
+/* --- 3. En-tête & Navigation (Modulaire & Responsive) --- */
+.site-header {
+    width: 100%;
+    padding: 20px 40px;
+    background-color: transparent;
+    position: relative;
+    z-index: 100;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    color: #777;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #222;
+    font-weight: 700;
+}
+
+/* Bouton Burger Mobile (Masqué sur Desktop) */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 101;
+}
+
+.hamburger {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #333;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: #333;
+    left: 0;
+    transition: transform 0.3s ease, top 0.3s ease;
+}
+
+.hamburger::before { top: -7px; }
+.hamburger::after { top: 7px; }
+
+/* Animation du bouton Burger ouvert (X) */
+.nav-toggle.open .hamburger {
+    background-color: transparent;
+}
+
+.nav-toggle.open .hamburger::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.nav-toggle.open .hamburger::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
 /* --- 4. Structure principale --- */
 .main-content {
     flex: 1;
