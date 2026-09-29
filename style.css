@@ -1,7 +1,7 @@
 /* Déclaration de la police Codec Pro Light */
 @font-face {
-  font-family: 'Codec Pro Light';
-  src: url('CodecPro-Light.ttf') format('truetype');
+  font-family: 'Font Mel';
+  src: url('FontMel.woff2') format('woff2');
   font-weight: 300; /* 300 est la valeur standard pour une déclinaison "Light" */
   font-style: normal;
   font-display: swap; /* Recommandé : évite le texte invisible pendant le chargement */
@@ -14,7 +14,7 @@
 }
 
 body {
-    font-family: 'Codec Pro Light', Helvetica, Arial, sans-serif;
+    font-family: 'Font Mel', Helvetica, Arial, sans-serif;
     color: #4a4a4a;
     min-height: 100vh;
     display: flex;
