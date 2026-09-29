@@ -1,6 +1,10 @@
-/* --- 0. Import & Définition de la police Garet --- */
-@import url('https://fonts.googleapis.com/css2?family=Garet:wght@300;400;700&display=swap');
-
+@font-face {
+    font-family: 'Garet';
+    src: url('Garet-Book.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
 /* --- 1. Réinitialisation globale --- */
 * {
     box-sizing: border-box;
