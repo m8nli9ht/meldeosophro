@@ -403,12 +403,25 @@ body.page-home {
 }
 
 /* --- 7. PAGE : CHAMPS D'APPLICATION (Cartes) --- */
+
 .page-title {
     font-size: 2.8rem;
     font-weight: 300;
     color: #333;
     margin-bottom: 40px;
     letter-spacing: -0.5px;
+}
+
+/* Centrage du conteneur dans la section Applications */
+.applications-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Centrage du titre et ajustement des marges */
+.page-champs-application .page-title {
+    text-align: center; /* Centre le titre "Champs d'application" */
 }
 
 .cards-grid {
