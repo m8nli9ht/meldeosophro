@@ -139,6 +139,14 @@ body.page-home {
     font-weight: 300;
 }
 
+/* À ajouter dans style.css sous la section PAGE : ACCUEIL */
+.brand-logo {
+    max-width: 180px; /* Ajuste cette valeur selon le rendu souhaité (ex: 150px à 200px) */
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+}
+
 /* Zone Accroche & Bouton à droite */
 .home-hero {
     max-width: 420px;
