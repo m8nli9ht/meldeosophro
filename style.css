@@ -1,7 +1,7 @@
 /* Déclaration de la police Codec Pro Light */
 @font-face {
   font-family: 'Font Mel';
-  src: url('FontMel.woff2') format('woff2');
+  src: url('Garet-Book.woff2') format('woff2');
   font-weight: 300; /* 300 est la valeur standard pour une déclinaison "Light" */
   font-style: normal;
   font-display: swap; /* Recommandé : évite le texte invisible pendant le chargement */
