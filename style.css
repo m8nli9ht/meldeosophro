@@ -867,3 +867,72 @@ body.page-home {
         left: 15px;
     }
 }
+
+/* --- 11. Adaptations Responsive & Navigation Mobile --- */
+@media (max-width: 900px) {
+    /* Styles Navigation Burger */
+    .site-header {
+        padding: 15px 20px;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fcf8f2;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 30px 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        display: none;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 0.95rem;
+    }
+
+    /* Layout Grilles */
+    .cards-grid,
+    .rdv-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    /* Pages Contenu */
+    .about-wrapper,
+    .origins-wrapper {
+        min-height: auto;
+    }
+
+    .about-wrapper .page-title,
+    .origins-wrapper .page-title {
+        position: static;
+        margin-bottom: 20px;
+    }
+
+    .photo-polaroid,
+    .photo-polaroid-caycedo,
+    .illustration-heart,
+    .illustration-brain {
+        position: static;
+        transform: none;
+        margin: 20px auto;
+        display: block;
+    }
+
+    .about-text,
+    .origins-text {
+        margin-left: 0;
+        max-width: 100%;
+    }
+}
