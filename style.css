@@ -141,7 +141,7 @@ body.page-home {
 
 /* À ajouter dans style.css sous la section PAGE : ACCUEIL */
 .brand-logo {
-    max-width: 180px; /* Ajuste cette valeur selon le rendu souhaité (ex: 150px à 200px) */
+    max-width: 500px; /* Ajuste cette valeur selon le rendu souhaité (ex: 150px à 200px) */
     height: auto;
     display: block;
     margin-bottom: 15px;
