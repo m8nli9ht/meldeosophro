@@ -120,8 +120,6 @@ body.page-home {
 
 .brand-title {
     position: absolute;
-    bottom: 20px;
-    left: 180px;
     display: flex;
     flex-direction: column;
 }
