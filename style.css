@@ -1,11 +1,3 @@
-/* Déclaration de la police Codec Pro Light */
-@font-face {
-  font-family: 'Font Mel';
-  src: url('Garet-Book.woff2') format('woff2');
-  font-weight: 300; /* 300 est la valeur standard pour une déclinaison "Light" */
-  font-style: normal;
-  font-display: swap; /* Recommandé : évite le texte invisible pendant le chargement */
-}
 /* --- 1. Réinitialisation globale --- */
 * {
     box-sizing: border-box;
@@ -14,7 +6,7 @@
 }
 
 body {
-    font-family: 'Font Mel', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: #4a4a4a;
     min-height: 100vh;
     display: flex;
@@ -25,7 +17,8 @@ body {
 /* --- 2. Fonds d'écran spécifiques par page --- */
 
 /* Fond avec image pour les pages qui en ont besoin */
-body.page-champs-application {
+body.page-champs-application,
+body.page-prestations {
     background: linear-gradient(rgba(248, 237, 235, 0.45), rgba(248, 237, 235, 0.45)), 
                 url('bg_application.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -41,7 +34,7 @@ body.page-origines {
 .site-header {
     width: 100%;
     padding: 20px 40px;
-    background-color: rgba(255, 246, 234, 0.9);
+    background-color: transparent;
 }
 
 .main-nav ul {
@@ -71,6 +64,7 @@ body.page-origines {
     flex: 1;
     display: flex;
     align-items: center;
+    justify-content: center; /* Centrage vertical et horizontal global */
     position: relative;
     padding: 40px 20px;
 }
@@ -98,59 +92,11 @@ body.page-home {
 }
 
 /* Zone Marque à gauche */
-
-/* Le M géant avec la typo Virtual */
-.brand-letter-virtual {
-    position: absolute;
-    top: -20px;
-    left: 0;
-    font-family: 'Virtual', cursive, sans-serif;
-    font-size: 14rem; /* Ajuste la taille selon le rendu de la police */
-    line-height: 1;
-    color: #000000;
-    z-index: 1;
-    user-select: none;
-}
-.brand-logo {
-  /* Largeur adaptée pour englober le M + le cœur */
-  width: 100%;
-  max-width: 420px;
-  height: auto;
-  display: block;
-}
-
-/* Optionnel : centrage ou alignement selon votre mise en page */
 .home-brand {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* ou center si vous souhaitez tout centrer */
+    position: relative;
+    width: 450px;
+    height: 380px;
 }
-
-/* Adaptation pour les écrans mobiles */
-@media (max-width: 768px) {
-  .brand-logo {
-    max-width: 280px;
-  }
-}
-
-
-.brand-heart {
-    position: absolute;
-    top: 90px;
-    left: 170px;
-    width: 150px;
-    z-index: 2;
-}
-
-.brand-title {
-    position: absolute;
-    bottom: 20px;
-    left: 180px;
-    display: flex;
-    flex-direction: column;
-    z-index: 2;
-}
-
 
 .brand-letter {
     position: absolute;
@@ -159,7 +105,20 @@ body.page-home {
     width: 220px;
 }
 
+.brand-heart {
+    position: absolute;
+    top: 90px;
+    left: 170px;
+    width: 150px;
+}
 
+.brand-title {
+    position: absolute;
+    bottom: 20px;
+    left: 180px;
+    display: flex;
+    flex-direction: column;
+}
 
 .brand-name {
     font-size: 1.2rem;
@@ -279,7 +238,7 @@ body.page-home {
 .about-text {
     margin-left: 380px;
     max-width: 580px;
-    font-size: 1.08rem;
+    font-size: 0.88rem;
     line-height: 1.6;
     color: #666;
     font-weight: 300;
@@ -324,49 +283,49 @@ body.page-home {
 
 .origins-wrapper {
     position: relative;
-    max-width: 1200px; /* Élargissement du conteneur global */
+    max-width: 1050px;
     width: 100%;
     margin: 0 auto;
-    min-height: 600px;
+    min-height: 540px;
 }
 
-/* Titre "Origines" */
+/* Titre "Origines" placé à gauche */
 .origins-wrapper .page-title {
     position: absolute;
-    top: 10px;
-    left: 20px;
-    font-size: 3.8rem;
+    top: 20px;
+    left: 40px;
+    font-size: 3.5rem;
     font-weight: 300;
     color: #333;
     letter-spacing: -0.5px;
 }
 
-/* Photo Polaroid Caycedo (agrandie de 130px à 210px) */
+/* Photo Polaroid d'Alfonso Caycedo */
 .photo-polaroid-caycedo {
     position: absolute;
-    top: 120px;
-    left: 170px;
+    top: 140px;
+    left: 230px;
     background: #ffffff;
-    padding: 12px 12px 40px 12px;
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
-    transform: rotate(6deg);
-    width: 210px;
+    padding: 8px 8px 30px 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    transform: rotate(6deg); /* Inclinaison vers la droite */
+    width: 130px;
     z-index: 2;
 }
 
 .photo-polaroid-caycedo img {
     width: 100%;
-    height: 180px;
+    height: 120px;
     object-fit: cover;
     display: block;
 }
 
-/* Illustration Cerveau + Cœur (agrandie de 250px à 320px) */
+/* Illustration Cerveau + Cœur + Bonhommes */
 .illustration-brain {
     position: absolute;
-    bottom: -10px;
-    left: 20px;
-    width: 320px;
+    bottom: -20px;
+    left: 60px;
+    width: 250px;
     z-index: 2;
 }
 
@@ -375,34 +334,39 @@ body.page-home {
     height: auto;
 }
 
-/* Bloc texte agrandi et rehaussé en lisibilité */
+/* Bloc texte décalé à droite */
 .origins-text {
-    margin-left: 480px;
-    max-width: 640px;
-    font-size: 1.08rem; /* Passer de 0.88rem à ~17px */
-    line-height: 1.75;  /* Meilleure aération des lignes */
-    color: #4a4a4a;
+    margin-left: 460px;
+    max-width: 520px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #666;
     font-weight: 300;
 }
 
 .origins-text p {
-    margin-bottom: 22px;
+    margin-bottom: 18px;
 }
 
 .origins-text strong {
-    color: #222;
+    color: #333;
     font-weight: 600;
 }
 
 .origins-text .disclaimer {
     font-style: italic;
-    font-size: 0.92rem;
+    font-size: 0.82rem;
     color: #777;
-    margin-top: 30px;
-    line-height: 1.5;
+    margin-top: 25px;
 }
 
 /* --- 7. PAGE : CHAMPS D'APPLICATION (Cartes) --- */
+.applications-section,
+.prestations-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 .page-title {
     font-size: 2.8rem;
@@ -410,18 +374,7 @@ body.page-home {
     color: #333;
     margin-bottom: 40px;
     letter-spacing: -0.5px;
-}
-
-/* Centrage du conteneur dans la section Applications */
-.applications-section {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-/* Centrage du titre et ajustement des marges */
-.page-champs-application .page-title {
-    text-align: center; /* Centre le titre "Champs d'application" */
+    text-align: left; /* Conserve l'alignement du titre à gauche */
 }
 
 .cards-grid {
@@ -451,6 +404,7 @@ body.page-home {
     font-weight: 300;
     line-height: 1.25;
     color: #333;
+    text-align: left; /* Alignement à gauche du titre interne des cartes */
 }
 
 .card-body {
@@ -467,43 +421,6 @@ body.page-home {
     margin-bottom: 6px;
     line-height: 1.4;
     font-weight: 300;
-}
-
-/* --- Ajustements spécifiques à la page Prestations --- */
-.page-prestations .card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-
-.card-subtitle {
-    font-size: 0.95rem;
-    margin-bottom: 1.2rem;
-    opacity: 0.85;
-    line-height: 1.4;
-}
-
-.card-action {
-    margin-top: 1.5rem;
-    text-align: center;
-}
-
-.btn-card {
-    display: inline-block;
-    padding: 0.6rem 1.2rem;
-    border: 1px solid currentColor;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-}
-
-.btn-card:hover {
-    background-color: currentColor;
-    color: #fff;
 }
 
 /* --- 8. Bouton Accueil en bas à droite --- */
@@ -555,5 +472,63 @@ body.page-home {
     .about-text {
         margin-left: 0;
         max-width: 100%;
+    }
+}
+
+/* --- 10. EXTENSIONS PRESTATIONS (SANS RÉGRESSION) --- */
+.mt-50 {
+    margin-top: 50px;
+}
+
+.section-subtitle {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.section-intro {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 25px;
+    font-weight: 300;
+    max-width: 850px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.testimonial-box {
+    background-color: rgba(253, 251, 247, 0.85);
+    border-left: 3px solid #e8a598;
+    padding: 20px 25px;
+    font-style: italic;
+    font-size: 0.92rem;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.cards-grid.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.card-body p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    font-weight: 300;
+}
+
+.card-body strong {
+    color: #333;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .cards-grid.grid-2 {
+        grid-template-columns: 1fr;
     }
 }
