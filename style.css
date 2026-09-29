@@ -24,11 +24,14 @@ body {
 /* --- 2. Fonds d'écran spécifiques par page --- */
 
 /* Fond avec image pour les pages qui en ont besoin */
-body.page-champs-application,
-body.page-prestations {
+body.page-champs-application {
     background: linear-gradient(rgba(248, 237, 235, 0.45), rgba(248, 237, 235, 0.45)), 
                 url('bg_application.jpg') no-repeat center center fixed;
     background-size: cover;
+}
+
+body.page-prestations {
+    background-color: rgb(230, 227, 208);
 }
 
 /* Fond crème uni pour À propos et Origines */
