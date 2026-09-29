@@ -650,6 +650,84 @@ body.page-home {
 .seance-footer-note p:first-child {
     margin-bottom: 10px;
 }
+
+/* --- 9. PAGE : RENDEZ-VOUS (rdv.html) --- */
+.rdv-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.rdv-card {
+    min-height: auto;
+}
+
+/* Contact List & Icons */
+.contact-list {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.contact-list .icon {
+    width: 20px;
+    height: 20px;
+    color: #e8a598;
+    flex-shrink: 0;
+}
+
+.contact-list a {
+    color: #4a4a4a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-list a:hover {
+    color: #e8a598;
+}
+
+.cabinet-details {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+    border-top: 1px dashed #eae5de;
+    padding-top: 15px;
+}
+
+/* Prices List */
+.prices-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.prices-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed #eae5de;
+    font-size: 0.95rem;
+}
+
+.prices-list strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.mutuelle-info {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #777;
+    line-height: 1.5;
+}
 /* --- BOUTON RDV OMNIPRÉSENT --- */
 .btn-floating-rdv {
     position: fixed;
