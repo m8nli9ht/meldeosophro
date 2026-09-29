@@ -545,3 +545,51 @@ body.page-home {
         grid-template-columns: 1fr;
     }
 }
+
+/* --- BOUTON RDV OMNIPRÉSENT --- */
+.btn-floating-rdv {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #333;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-floating-rdv:hover {
+    background-color: #e8a598;
+    transform: translateY(-2px);
+}
+
+/* Ajustement pour éviter le chevauchement avec le bouton retour accueil (.home-icon) */
+.home-icon {
+    left: 25px;
+    right: auto;
+}
+
+/* Adaptation Mobile */
+@media (max-width: 900px) {
+    .btn-floating-rdv {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 16px;
+        font-size: 0.75rem;
+    }
+
+    .home-icon {
+        bottom: 15px;
+        left: 15px;
+    }
+}
