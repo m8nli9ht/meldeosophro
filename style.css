@@ -109,7 +109,7 @@ body.page-rdv {
 .hamburger::before { top: -7px; }
 .hamburger::after { top: 7px; }
 
-/* Animation du bouton Burger ouvert (Transforme en Croix) */
+/* Animation du bouton Burger ouvert */
 .nav-toggle.open .hamburger {
     background-color: transparent;
 }
@@ -158,7 +158,10 @@ body.page-home {
 .home-brand {
     position: relative;
     width: 450px;
-    height: 380px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .brand-letter {
@@ -195,7 +198,8 @@ body.page-home {
 }
 
 .brand-logo {
-    max-width: 500px;
+    max-width: 100%;
+    width: 450px;
     height: auto;
     display: block;
     margin-bottom: 15px;
@@ -203,6 +207,7 @@ body.page-home {
 
 .home-hero {
     max-width: 420px;
+    width: 100%;
 }
 
 .home-hero h1 {
@@ -518,8 +523,7 @@ body.page-home {
 
 /* --- 9. EXTENSIONS PRESTATIONS & SEANCE --- */
 .applications-section,
-.prestations-section,
-.rdv-section {
+.prestations-section {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -740,7 +744,7 @@ body.page-home {
     line-height: 1.5;
 }
 
-/* --- 11. BOUTONS FLOTTANTS (RDV & Accueil) --- */
+/* --- 11. BOUTONS FLOTTANTS --- */
 .btn-floating-rdv {
     position: fixed;
     bottom: 25px;
@@ -789,7 +793,7 @@ body.page-home {
 
 /* --- 12. Adaptations Responsive & Navigation Mobile --- */
 @media (max-width: 900px) {
-    /* Affichage du bouton Burger */
+    /* Header et burger */
     .site-header {
         padding: 15px 20px;
     }
@@ -798,7 +802,6 @@ body.page-home {
         display: block;
     }
 
-    /* Le menu est masqué par défaut en mobile */
     .nav-links {
         position: absolute;
         top: 100%;
@@ -813,13 +816,37 @@ body.page-home {
         display: none;
     }
 
-    /* Affiché uniquement quand .open est présent */
     .nav-links.open {
         display: flex;
     }
 
     .nav-links a {
         font-size: 0.95rem;
+    }
+
+    /* Page Accueil Mobile */
+    .home-wrapper {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .home-brand {
+        width: 100%;
+        height: auto;
+    }
+
+    .brand-logo {
+        max-width: 280px; /* Taille réduite du logo sur mobile */
+        margin: 0 auto;
+    }
+
+    .home-hero {
+        max-width: 100%;
+    }
+
+    .home-hero h1 {
+        font-size: 1.7rem;
     }
 
     /* Grilles et Layouts mobiles */
