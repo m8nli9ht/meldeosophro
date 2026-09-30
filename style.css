@@ -518,7 +518,8 @@ body.page-home {
 
 /* --- 9. EXTENSIONS PRESTATIONS & SEANCE --- */
 .applications-section,
-.prestations-section {
+.prestations-section,
+.rdv-section {
     width: 100%;
     display: flex;
     justify-content: center;
