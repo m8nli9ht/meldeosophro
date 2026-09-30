@@ -145,6 +145,11 @@ body.page-home {
     background-size: cover;
 }
 
+body.page-prestations {
+    background: url('bg_prestations.jfif') no-repeat center center fixed;
+    background-size: cover;
+}
+
 .home-wrapper {
     max-width: 1100px;
     margin: 0 auto;
