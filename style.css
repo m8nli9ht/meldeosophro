@@ -5,6 +5,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 /* --- 1. Réinitialisation globale --- */
 * {
     box-sizing: border-box;
@@ -18,12 +19,10 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #fcf8f2; /* Fond neutre par défaut */
+    background-color: #fcf8f2;
 }
 
 /* --- 2. Fonds d'écran spécifiques par page --- */
-
-/* Fond avec image pour les pages qui en ont besoin */
 body.page-champs-application {
     background: linear-gradient(rgba(248, 237, 235, 0.45), rgba(248, 237, 235, 0.45)), 
                 url('bg_application.jpg') no-repeat center center fixed;
@@ -34,50 +33,13 @@ body.page-prestations {
     background-color: rgb(230, 227, 208);
 }
 
-/* Fond crème uni pour À propos et Origines */
-body.page-a-propos,
-body.page-origines {
-    background-color: #fcf8f2;
-}
-
-/* --- 3. En-tête & Navigation --- */
-.site-header {
-    width: 100%;
-    padding: 20px 40px;
-    background-color: transparent;
-}
-
-.main-nav ul {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    gap: 25px;
-}
-
-.main-nav a {
-    text-decoration: none;
-    font-size: 0.8rem;
-    letter-spacing: 1.5px;
-    color: #777;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.main-nav a:hover,
-.main-nav a.active {
-    color: #222;
-    font-weight: 700;
-}
-
-/* Fond crème uni pour À propos, Origines, Prestations et RDV */
 body.page-a-propos,
 body.page-origines,
-body.page-prestations,
 body.page-rdv {
     background-color: #fcf8f2;
 }
 
-/* --- 3. En-tête & Navigation (Modulaire & Responsive) --- */
+/* --- 3. En-tête & Navigation Modulaire --- */
 .site-header {
     width: 100%;
     padding: 20px 40px;
@@ -147,7 +109,7 @@ body.page-rdv {
 .hamburger::before { top: -7px; }
 .hamburger::after { top: 7px; }
 
-/* Animation du bouton Burger ouvert (X) */
+/* Animation du bouton Burger ouvert (Transforme en Croix) */
 .nav-toggle.open .hamburger {
     background-color: transparent;
 }
@@ -161,6 +123,7 @@ body.page-rdv {
     top: 0;
     transform: rotate(-45deg);
 }
+
 /* --- 4. Structure principale --- */
 .main-content {
     flex: 1;
@@ -176,7 +139,7 @@ body.page-rdv {
     width: 100%;
 }
 
-/* --- PAGE : ACCUEIL --- */
+/* --- 5. PAGE : ACCUEIL --- */
 body.page-home {
     background: url('bg-aquarelle-terracotta.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -192,7 +155,6 @@ body.page-home {
     gap: 50px;
 }
 
-/* Zone Marque à gauche */
 .home-brand {
     position: relative;
     width: 450px;
@@ -232,15 +194,13 @@ body.page-home {
     font-weight: 300;
 }
 
-/* À ajouter dans style.css sous la section PAGE : ACCUEIL */
 .brand-logo {
-    max-width: 500px; /* Ajuste cette valeur selon le rendu souhaité (ex: 150px à 200px) */
+    max-width: 500px;
     height: auto;
     display: block;
     margin-bottom: 15px;
 }
 
-/* Zone Accroche & Bouton à droite */
 .home-hero {
     max-width: 420px;
 }
@@ -261,7 +221,6 @@ body.page-home {
     font-weight: 300;
 }
 
-/* Bouton principal de RDV */
 .btn-primary {
     display: inline-block;
     padding: 14px 28px;
@@ -280,7 +239,7 @@ body.page-home {
     color: #fff;
 }
 
-/* --- 5. PAGE : À PROPOS --- */
+/* --- 6. PAGE : À PROPOS --- */
 .page-a-propos .main-content {
     display: flex;
     align-items: center;
@@ -296,7 +255,6 @@ body.page-home {
     min-height: 520px;
 }
 
-/* Titre "À propos" placé à gauche */
 .about-wrapper .page-title {
     position: absolute;
     top: 20px;
@@ -307,7 +265,6 @@ body.page-home {
     letter-spacing: -0.5px;
 }
 
-/* Photo Polaroid inclinée */
 .photo-polaroid {
     position: absolute;
     top: 160px;
@@ -327,7 +284,6 @@ body.page-home {
     display: block;
 }
 
-/* Cœur avec pansement */
 .illustration-heart {
     position: absolute;
     bottom: -10px;
@@ -341,7 +297,6 @@ body.page-home {
     height: auto;
 }
 
-/* Texte décalé sur la droite */
 .about-text {
     margin-left: 380px;
     max-width: 580px;
@@ -360,7 +315,6 @@ body.page-home {
     font-weight: 600;
 }
 
-/* Signature */
 .signature-block {
     display: flex;
     align-items: center;
@@ -380,7 +334,7 @@ body.page-home {
     color: #777;
 }
 
-/* --- 6. PAGE : ORIGINES --- */
+/* --- 7. PAGE : ORIGINES --- */
 .page-origines .main-content {
     display: flex;
     align-items: center;
@@ -396,7 +350,6 @@ body.page-home {
     min-height: 540px;
 }
 
-/* Titre "Origines" placé à gauche */
 .origins-wrapper .page-title {
     position: absolute;
     top: 20px;
@@ -407,7 +360,6 @@ body.page-home {
     letter-spacing: -0.5px;
 }
 
-/* Photo Polaroid d'Alfonso Caycedo */
 .photo-polaroid-caycedo {
     position: absolute;
     top: 140px;
@@ -415,7 +367,7 @@ body.page-home {
     background: #ffffff;
     padding: 8px 8px 30px 8px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-    transform: rotate(6deg); /* Inclinaison vers la droite */
+    transform: rotate(6deg);
     width: 130px;
     z-index: 2;
 }
@@ -427,7 +379,6 @@ body.page-home {
     display: block;
 }
 
-/* Illustration Cerveau + Cœur + Bonhommes */
 .illustration-brain {
     position: absolute;
     bottom: -20px;
@@ -441,7 +392,6 @@ body.page-home {
     height: auto;
 }
 
-/* Bloc texte décalé à droite */
 .origins-text {
     margin-left: 460px;
     max-width: 520px;
@@ -467,7 +417,7 @@ body.page-home {
     margin-top: 25px;
 }
 
-/* --- 7. PAGE : CHAMPS D'APPLICATION (Cartes) --- */
+/* --- 8. CARTES & GRILLES --- */
 .page-title {
     font-size: 2.8rem;
     font-weight: 300;
@@ -480,6 +430,10 @@ body.page-home {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+}
+
+.cards-grid.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .card {
@@ -507,6 +461,9 @@ body.page-home {
 
 .card-body {
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .card-body ul {
@@ -516,64 +473,50 @@ body.page-home {
 .card-body li {
     font-size: 0.95rem;
     color: #555;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     line-height: 1.4;
     font-weight: 300;
 }
 
-/* --- 8. Bouton Accueil en bas à droite --- */
-.home-icon {
-    position: fixed;
-    bottom: 25px;
-    right: 35px;
-    background-color: #e8a598;
+.card-body p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    font-weight: 300;
+}
+
+.card-body strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.card-action {
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.btn-card {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid #333;
+    background-color: transparent;
+    color: #222;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-card:hover {
+    background-color: #333;
     color: #fff;
-    width: 36px;
-    height: 36px;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.3s ease;
 }
 
-.home-icon:hover {
-    opacity: 0.85;
-}
-
-/* --- 9. Adaptation Mobile & Tablette --- */
-@media (max-width: 900px) {
-    .cards-grid,
-    .origins-wrapper {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .about-wrapper {
-        min-height: auto;
-    }
-
-    .about-wrapper .page-title,
-    .photo-polaroid,
-    .illustration-heart,
-    .origins-image {
-        position: static;
-        transform: none;
-        margin: 20px auto;
-        text-align: center;
-    }
-
-    .origins-image {
-        max-width: 300px;
-    }
-
-    .about-text {
-        margin-left: 0;
-        max-width: 100%;
-    }
-}
-
-/* --- 10. EXTENSIONS PAGE PRESTATIONS --- */
+/* --- 9. EXTENSIONS PRESTATIONS & SEANCE --- */
 .applications-section,
 .prestations-section {
     width: 100%;
@@ -615,29 +558,6 @@ body.page-home {
     text-align: left;
 }
 
-.cards-grid.grid-2 {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.card-body p {
-    font-size: 0.95rem;
-    color: #555;
-    line-height: 1.5;
-    margin-bottom: 12px;
-    font-weight: 300;
-}
-
-.card-body strong {
-    color: #333;
-    font-weight: 600;
-}
-
-@media (max-width: 900px) {
-    .cards-grid.grid-2 {
-        grid-template-columns: 1fr;
-    }
-}
-/* --- 8. PAGE : SÉANCE --- */
 .page-seance .main-content {
     display: flex;
     align-items: center;
@@ -743,7 +663,7 @@ body.page-home {
     margin-bottom: 10px;
 }
 
-/* --- 9. PAGE : RENDEZ-VOUS (rdv.html) --- */
+/* --- 10. PAGE : RENDEZ-VOUS --- */
 .rdv-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -754,7 +674,6 @@ body.page-home {
     min-height: auto;
 }
 
-/* Contact List & Icons */
 .contact-list {
     list-style: none;
     margin-bottom: 25px;
@@ -794,7 +713,6 @@ body.page-home {
     padding-top: 15px;
 }
 
-/* Prices List */
 .prices-list {
     list-style: none;
     margin-bottom: 20px;
@@ -820,7 +738,8 @@ body.page-home {
     color: #777;
     line-height: 1.5;
 }
-/* --- BOUTON RDV OMNIPRÉSENT --- */
+
+/* --- 11. BOUTONS FLOTTANTS (RDV & Accueil) --- */
 .btn-floating-rdv {
     position: fixed;
     bottom: 25px;
@@ -847,30 +766,29 @@ body.page-home {
     transform: translateY(-2px);
 }
 
-/* Ajustement pour éviter le chevauchement avec le bouton retour accueil (.home-icon) */
 .home-icon {
+    position: fixed;
+    bottom: 25px;
     left: 25px;
-    right: auto;
+    background-color: #e8a598;
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+    z-index: 10;
 }
 
-/* Adaptation Mobile */
-@media (max-width: 900px) {
-    .btn-floating-rdv {
-        bottom: 15px;
-        right: 15px;
-        padding: 10px 16px;
-        font-size: 0.75rem;
-    }
-
-    .home-icon {
-        bottom: 15px;
-        left: 15px;
-    }
+.home-icon:hover {
+    opacity: 0.85;
 }
 
-/* --- 11. Adaptations Responsive & Navigation Mobile --- */
+/* --- 12. Adaptations Responsive & Navigation Mobile --- */
 @media (max-width: 900px) {
-    /* Styles Navigation Burger */
+    /* Affichage du bouton Burger */
     .site-header {
         padding: 15px 20px;
     }
@@ -879,6 +797,7 @@ body.page-home {
         display: block;
     }
 
+    /* Le menu est masqué par défaut en mobile */
     .nav-links {
         position: absolute;
         top: 100%;
@@ -893,6 +812,7 @@ body.page-home {
         display: none;
     }
 
+    /* Affiché uniquement quand .open est présent */
     .nav-links.open {
         display: flex;
     }
@@ -901,17 +821,19 @@ body.page-home {
         font-size: 0.95rem;
     }
 
-    /* Layout Grilles */
+    /* Grilles et Layouts mobiles */
     .cards-grid,
+    .cards-grid.grid-2,
     .rdv-grid {
         grid-template-columns: 1fr;
         gap: 25px;
     }
 
-    /* Pages Contenu */
     .about-wrapper,
-    .origins-wrapper {
+    .origins-wrapper,
+    .seance-wrapper {
         min-height: auto;
+        flex-direction: column;
     }
 
     .about-wrapper .page-title,
@@ -934,5 +856,17 @@ body.page-home {
     .origins-text {
         margin-left: 0;
         max-width: 100%;
+    }
+
+    .btn-floating-rdv {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 16px;
+        font-size: 0.75rem;
+    }
+
+    .home-icon {
+        bottom: 15px;
+        left: 15px;
     }
 }
